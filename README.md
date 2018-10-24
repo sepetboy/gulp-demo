@@ -9,11 +9,9 @@ https://w3ctrain.com/2015/12/22/gulp-for-beginners/?utm_source=tuicool&utm_mediu
 ```
 <img src="https://github.com/sepetboy/gulp-demo/blob/master/images/update.png"/>
 
-## 升级minimatch和graceful-fs
 ``` bash
-# npm update minimatch@3.0.2
-# npm update graceful-fs@4
-# npm update -d
+安装4.0.0版本
+# npm install --save-dev gulp@4.0.0
 ```
 ## git add .出现警告
 ``` bash
