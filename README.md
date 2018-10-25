@@ -40,18 +40,23 @@ gulp.task("watch", function () {
   //gulp.watch("app/scss/**/*.scss", ['sass']) , gulp4.0.0版本watch task必须传入一个方法,因此报错，使用下面的方式
   gulp.watch("app/scss/**/*.scss", gulp.series('sass'))
 })
-Gulp3，如果有一个任务A，B和C的列表，你想在一个序列中运行（确保A在B开始之前完成，而B在C开始之前完成），代码如下：
-gulp.task('a', function () {
-  // Do something.
-});
-gulp.task('b', ['a'], function () {
-  // Do some stuff.
-});
-gulp.task('c', ['b'], function () {
-    // Do some more stuff.
-});
-在Gulp4中会报错：AssertionError: Task function must be specified
-使用gulp.series和gulp.parallel，因为gulp任务现在只有两个参数。
+```
+## Gulp3和Gulp4的部分差异
+``` bash
+
+1、Gulp3，如果有一个任务A，B和C的列表，你想在一个序列中运行（确保A在B开始之前完成，而B在C开始之前完成），代码如下：
+  gulp.task('a', function () {
+    // Do something.
+  });
+  gulp.task('b', ['a'], function () {
+    // Do some stuff.
+  });
+  gulp.task('c', ['b'], function () {
+      // Do some more stuff.
+  });
+
+2、在Gulp4中会报错：AssertionError: Task function must be specified
+  因此使用gulp.series和gulp.parallel，因为gulp任务现在只有两个参数，其中：
   //gulp.series：按照顺序执行
   //gulp.paralle：可以并行计算
   gulp.task('my-tasks', gulp.series('a', 'b', 'c', function() {
