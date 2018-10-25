@@ -8,6 +8,7 @@ https://w3ctrain.com/2015/12/22/gulp-for-beginners/?utm_source=tuicool&utm_mediu
 # npm install --save-dev gulp@4.0.0
 ```
 ## 用到的依赖包
+``` bash
 gulp
 gulp-sass：将sass文件编译为css文件
 browser-sync：在服务器上进行实时样式注入
@@ -17,6 +18,7 @@ gulp-clean-css：压缩css文件
 gulp-imagemin：压缩图片
 gulp-cache：压缩图片可能会占用较长时间，使用 gulp-cache 插件可以减少重复压缩
 del：清理生成文件
+```
 ## scss文件编译成css文件
 ``` bash
 //开启一个任务
